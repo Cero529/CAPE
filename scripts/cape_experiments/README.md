@@ -15,8 +15,8 @@ The default is the manuscript profile: `T=100`, `d=768`, batch size 64,
 `backbone_mode=precomputed_avhubert`. Every feature NPZ must contain
 `video_features`, `audio_features`, and the frozen AV-HuBERT final-layer
 sequence `backbone_features`. The runner fails rather than silently replacing
-AV-HuBERT with the legacy DiMoDif detector. Historical runs remain available
-through the explicit `--backbone-mode legacy_dimodif` option.
+AV-HuBERT with an incompatible detector. Historical compatibility runs remain
+available only through an explicit non-paper configuration.
 
 Paper-profile NPZ files must also contain scalar `valid_length` or a
 contiguous-prefix `pair_valid_mask`. Verify the complete metadata inventory

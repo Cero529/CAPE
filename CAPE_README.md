@@ -1,7 +1,7 @@
 # CAPE: Continual Audio-Visual Pattern Experts with Unknown Forgery Discovery
 
-This directory adds CAPE as a side-by-side research extension. The original
-audio-visual detector code is left intact and can still be used as a baseline.
+This directory contains the CAPE implementation for open-world,
+pattern-incremental audio-visual deepfake detection.
 
 ## What Was Added
 
@@ -35,8 +35,8 @@ array is the frozen AV-HuBERT final multimodal sequence (or its pooled
 768-dimensional vector). Each file must also contain either scalar
 `valid_length` or a contiguous-prefix `pair_valid_mask`, so zero padding is
 excluded from pooling and discrepancy statistics. Missing paper-profile keys
-are hard errors; the code no longer silently substitutes the legacy DiMoDif
-detector for the manuscript backbone.
+are hard errors; the code does not silently substitute an incompatible
+backbone for the manuscript profile.
 
 Recommended pattern tasks:
 
@@ -96,11 +96,9 @@ Run AV-Deepfake1M pattern-incremental CAPE:
 python scripts/cape_pattern_incremental_av1M.py
 ```
 
-The AV1M-specific script now defaults to the paper settings: tasks `1,2,3`,
+The AV1M-specific script defaults to the paper settings: tasks `1,2,3`,
 `T=100`, `d=768`, batch size 64, replay capacity 1024, 20 epochs, and official
-`test` evaluation. To replay historical DiMoDif-feature experiments, pass
-`--backbone-mode legacy_dimodif` together with the original dimensions and
-checkpoint explicitly.
+`test` evaluation.
 
 ```bash
 python scripts/cape_pattern_incremental_av1M.py --epochs 20
