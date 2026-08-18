@@ -1,0 +1,40 @@
+# Python and editor state
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+
+# Datasets, features, checkpoints, and generated results
+data/
+ckpt/
+results/
+tmp/
+paper/
+CPAE论文/
+CPAE论文.zip
+autoavsr/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Logs and generated build artifacts
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+dist/
+build/

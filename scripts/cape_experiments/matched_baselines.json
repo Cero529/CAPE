@@ -1,0 +1,26 @@
+{
+  "fairness_contract": {
+    "backbone": "Use the same frozen DiMoDif audio-visual backbone checkpoint.",
+    "stream": "Use the identical admitted-stage order and train/val/test splits.",
+    "memory": "Use the same replay budget K when the baseline supports replay.",
+    "inference": "Do not provide task, stage, pattern, or generator identity at inference.",
+    "optimization": "Report the original hyperparameters and a matched-budget variant separately.",
+    "statistics": "Run seeds 0,1,2,3,4 and report mean and sample standard deviation."
+  },
+  "external_baselines": [
+    {
+      "id": "choose_your_expert_2025",
+      "citation_key": "zhang2025choose",
+      "doi": "10.1145/3746027.3755398",
+      "source_status": "external source required",
+      "entrypoint": null
+    },
+    {
+      "id": "analytic_synaptic_balancer_2025",
+      "citation_key": "xiao2025analytic",
+      "doi": "10.1145/3746027.3755680",
+      "source_status": "external source required",
+      "entrypoint": null
+    }
+  ]
+}
